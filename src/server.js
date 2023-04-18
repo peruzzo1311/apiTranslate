@@ -6,7 +6,7 @@ const { Configuration, OpenAIApi } = require('openai')
 const app = express()
 const upload = multer({ dest: 'uploads/' })
 const configuration = new Configuration({
-  apiKey: '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',
+  apiKey: process.env.API_KEY,
 })
 const openai = new OpenAIApi(configuration)
 
@@ -53,7 +53,7 @@ app.post('/transcription', async (req, res) => {
 })
 
 app.get('/', (req, res) => {
-  res.json({ message: process.env.API_KEY })
+  res.json({ message: 'teste' })
 })
 
 app.listen(3000, () => {

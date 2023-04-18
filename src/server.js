@@ -6,7 +6,7 @@ const { Configuration, OpenAIApi } = require('openai')
 const app = express()
 const upload = multer({ dest: 'uploads/' })
 const configuration = new Configuration({
-  apiKey: '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',
+  apiKey: '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',
 })
 const openai = new OpenAIApi(configuration)
 

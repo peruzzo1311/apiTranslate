@@ -53,7 +53,7 @@ app.post('/transcription', async (req, res) => {
 })
 
 app.get('/', (req, res) => {
-  res.json({ message: 'Test' })
+  res.json({ message: process.env.API_KEY })
 })
 
 app.listen(3000, () => {
